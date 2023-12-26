@@ -1,13 +1,23 @@
 import React from 'react';
-
-import './App.css';
+import Landing from './pages/landing';
+import Nav from './pages/nav';
+import Dashboard from './pages/dashboard';
+import { BrowserRouter,  Route, Switch } from 'react-router-dom';
+import Signup from './components/auth/signup';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to the YQ messaging platform!</h1>
+    <div className="">
+      <header className="">
+        <Nav />
       </header>
+
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Landing} />
+          <Route path="/register" component={Signup} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
