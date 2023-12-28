@@ -7,10 +7,9 @@ import { CiHome } from "react-icons/ci";
 import { FiMessageSquare } from "react-icons/fi";
 import { FaUserFriends } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-import Signup from "../components/auth/signup"
+import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Navbar = () => {
   let name;
   const [open, setOpen] = useState(false);
   const [seo, setSeo] = useState("Test");
@@ -30,7 +29,7 @@ const Nav = () => {
               />
 
               <p className="text-center italic w-[100px] h-[33px] text-purple-600 text-[28px] font-normal font-['Sansita One']">
-                  <b>QS</b>
+                  <b>SpecTro</b>
               </p>
             </div>
           </a>
@@ -41,18 +40,16 @@ const Nav = () => {
               {/* AUTH LINKS */}
               <li className="text-center text-cyan-600 text-md py-2 px-4 lg:px-6 lg:py-2 font bold font-['Noto Sans'] font-semibold  border border-purple-600 rounded-xl">
                 <a 
-                  href="/login" 
+                  href="/signin" 
                   className="">
                     Sign In
                 </a>
               </li>
               <br/>
               <li className="text-center text-md py-2 px-4 lg:px-6 lg:py-2 bg-purple-600 text-white rounded-xl font-semibold hover:bg-cyan-600">
-                <BrowserRouter>
-                  <Link to="/signup">
-                    Get Started
-                  </Link>
-                </BrowserRouter>
+                <Link to="/signup">
+                Get Started
+                </Link>              
               </li>                 
             </ul>
           </nav>
@@ -62,4 +59,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navbar;

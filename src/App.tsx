@@ -1,23 +1,25 @@
 import React from 'react';
-import Landing from './pages/landing';
-import Nav from './pages/nav';
-import Dashboard from './pages/dashboard';
-import { BrowserRouter,  Route, Switch } from 'react-router-dom';
-import Signup from './components/auth/signup';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Navbar from './components/Navbar';
+import Signin from './components/auth/Signin';
+import Signup from './components/auth/Signup';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
     <div className="">
-      <header className="">
-        <Nav />
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="signin" element={<Signin />} />
+        <Route path="signup" element={<Signup />} />
+      </Routes>
 
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" component={Landing} />
-          <Route path="/register" component={Signup} />
-        </Switch>
-      </BrowserRouter>
+      <Footer />
     </div>
   );
 }

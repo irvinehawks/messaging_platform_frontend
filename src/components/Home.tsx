@@ -1,19 +1,13 @@
-import React, { useState } from 'react';
-import { FiMenu } from 'react-icons/fi';
-import { BrowserRouter, Link } from 'react-router-dom';
+import React from 'react'
 
- 
-
-function landing() {
+function Home() {
   return (
-
-
     <div className="flex flex-wrap">
         <div className="bg-white flex items-center w-full lg:w-1/2">
             <div className="max-w-2xl mb- p-12">
                 <h1 className="text-2xl lg:text-3xl lg:leading-tight xl:text-5xl xl:leading-tight leading-snug tracking-tight text-zinc-500 font-bold font-['Noto Sans']">
                     <span className="">
-                        Welcome to QS
+                        Welcome to SpecTro
                         <br />
                         Platform
                     </span>
@@ -42,11 +36,11 @@ function landing() {
         <div className="flex items-center justify-center w-full lg:w-1/2">
             <div className="">
                 <img
-                    src="/images/landing.png"
-                    width="400"
+                    src="/images/hero_linking.jpeg"
+                    width="600"
                     height="400"
-                    className="mt-10"
-                    alt="Hero Illustration"
+                    className="mt-10 mb-10 rounded-[12px]"
+                    alt="Hero linking"
                 />
             </div>
         </div>
@@ -54,4 +48,4 @@ function landing() {
   )
 }
 
-export default landing
+export default Home
