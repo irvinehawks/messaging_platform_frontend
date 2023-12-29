@@ -5,7 +5,6 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import Signin from './components/auth/Signin';
 import Footer from './components/Footer';
-import Signup from './components/auth/Signup';
 
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="signin" element={<Signin />} />
-        <Route path="signup" element={<Signup />} />
       </Routes>
 
       <Footer />
