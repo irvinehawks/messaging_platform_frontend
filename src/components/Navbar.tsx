@@ -7,7 +7,7 @@ import { CiHome } from "react-icons/ci";
 import { FiMessageSquare } from "react-icons/fi";
 import { FaUserFriends } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   let name;
@@ -39,17 +39,17 @@ const Navbar = () => {
             <ul className="text-md text-gray-600 lg:flex lg:justify-between gap-2 p-4"> 
               {/* AUTH LINKS */}
               <li className="text-center text-cyan-600 text-md py-2 px-4 lg:px-6 lg:py-2 font bold font-['Noto Sans'] font-semibold  border border-purple-600 rounded-xl">
-                <a 
-                  href="/signin" 
+                <NavLink 
+                  to="/signin" 
                   className="">
                     Sign In
-                </a>
+                </NavLink>
               </li>
               <br/>
               <li className="text-center text-md py-2 px-4 lg:px-6 lg:py-2 bg-purple-600 text-white rounded-xl font-semibold hover:bg-cyan-600">
-                <Link to="/signup">
+                <NavLink to="/signup">
                 Get Started
-                </Link>              
+                </NavLink>              
               </li>                 
             </ul>
           </nav>
